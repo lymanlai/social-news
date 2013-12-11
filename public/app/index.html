@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" ng-app="yahaApp"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>YaHa.Me</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css styles/lib.css -->
+    <link href="components/Flat-UI/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="components/Flat-UI/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">    
+    <link href="components/Flat-UI/css/flat-ui.css" rel="stylesheet">
+    <!-- endbuild -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!-- build:css styles/main.css -->
+    <link href="scripts/vendors/ladda/ladda-themeless.min.css" rel="stylesheet">
+    <link href="styles/app.css" rel="stylesheet">
+    <link href="styles/app-responsive.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="components/es5-shim/es5-shim.js"></script>
+      <script src="components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <div class="container-narrow ng-cloak loading">
+      <div class="jumbotron">
+        <h1 class="muted">            
+          <a href="/#">YaHa.Me</a>
+        </h1>
+        <br />
+        <h4>
+          <img src="images/loading.gif" width="54px" height="55px" /> &nbsp;&nbsp;&nbsp;&nbsp;Loading... 
+        </h4>
+      </div>
+    </div>
+    <div class="container-narrow ng-cloak">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+
+          <li ng-class="{ active: $state.includes('node') }"><a href="#/node">Node</a></li>
+
+          <li ng-show="hasPermission('anon')" ng-class="{ active: $state.is('login') }"><a href="#/login">Login</a></li>
+          <li ng-show="hasPermission('anon')" ng-class="{ active: $state.is('signup') }"><a href="#/signup">Signup</a></li>
+
+          <li ng-show="hasPermission('user')" ng-class="{ active: $state.includes('setting') }"><a href="#/setting/profile">Setting</a></li>
+          <li ng-show="hasPermission('user')" ng-class="{ active: $state.is('logout') }"><a href="#/logout">Logout</a></li>
+
+        </ul>
+        <h3 class="muted"><a href="/">YaHa.Me</a> <img src="images/loading.gif"  ng-show="loading" /></h3>
+      </div>
+
+      <hr />
+      
+      <div ui-view ng-animate="{enter:'fade-enter'}" id="main-content"></div>
+
+      <hr />
+
+      <div class="footer">
+          <span>&copy; YaHa.Me&nbsp;<yh-now-year/></span>
+          <span class="pull-right">
+              <a href="#contact-us">Contact Us</a>
+          </span>
+      </div>
+    </div>  
+
+    <script src="components/angular/angular.js"></script>
+    <script src="components/angular-sanitize/angular-sanitize.js"></script>
+
+    <!-- build:js scripts/all.js -->
+    <script src="components/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="scripts/vendors/ui-bootstrap/ui-bootstrap-0.3.0.js"></script>
+    <script src="scripts/vendors/ui-utils/keypress.js"></script>
+    <script src="scripts/vendors/ladda/spin.min.js"></script>
+    <script src="scripts/vendors/ladda/ladda.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/yh.js"></script>
+    <script src="scripts/user/main.js"></script>
+    <script src="scripts/user/login.js"></script>
+    <script src="scripts/user/signup.js"></script>
+    <script src="scripts/user/lostpassword.js"></script>
+    <script src="scripts/user/logout.js"></script>
+    
+    <script src="scripts/setting/main.js"></script>
+    <script src="scripts/setting/profile.js"></script>
+    <script src="scripts/setting/account.js"></script>
+
+    <script src="scripts/node/main.js"></script>
+    <script src="scripts/node/newest.js"></script>
+    <script src="scripts/node/newest.itemDetail.js"></script>
+    <script src="scripts/node/hotest.js"></script>
+    <script src="scripts/node/hotest.itemDetail.js"></script>
+    <script src="scripts/node/upest.js"></script>
+    <script src="scripts/node/upest.itemDetail.js"></script>
+    <script src="scripts/node/downest.js"></script>
+    <script src="scripts/node/downest.itemDetail.js"></script>
+
+    <script src="scripts/node/my.js"></script>
+    <script src="scripts/node/add.js"></script>
+    <!-- endbuild -->
+    <script>
+    if( location.hostname !== 'localhost' ){
+      var _gaq=[['_setAccount','UA-41049717-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    }
+    </script>
+  </body>
+</html>

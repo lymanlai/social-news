@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"title": {
+			"name": "title",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "title",
+			"order": 0
+		},
+		"memebers": {
+			"name": "memebers",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "memebers",
+			"order": 1
+		}
+	}
+}

@@ -1,0 +1,93 @@
+{
+	"type": "Collection",
+	"properties": {
+		"title": {
+			"name": "title",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "title",
+			"order": 0
+		},
+		"parentId": {
+			"name": "parentId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "parentId",
+			"order": 1
+		},
+		"authorId": {
+			"name": "authorId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "authorId",
+			"order": 2
+		},
+		"postedTime": {
+			"name": "postedTime",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "postedTime",
+			"order": 3
+		},
+		"score": {
+			"name": "score",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "score",
+			"order": 4
+		},
+		"authorDisplayName": {
+			"name": "authorDisplayName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "authorDisplayName",
+			"order": 5
+		},
+		"commentCount": {
+			"name": "commentCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "commentCount",
+			"order": 6
+		},
+		"voteUpCount": {
+			"name": "voteUpCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "voteUpCount",
+			"order": 7
+		},
+		"voteDownCount": {
+			"name": "voteDownCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "voteDownCount",
+			"order": 8
+		},
+		"url": {
+			"name": "url",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "url",
+			"order": 9
+		},
+		"text": {
+			"name": "text",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "text",
+			"order": 10
+		}
+	}
+}

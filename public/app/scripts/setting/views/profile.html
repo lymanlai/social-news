@@ -1,0 +1,43 @@
+<form class="form-horizontal" name="form" novalidate ng-submit="submit()">
+  <div class="control-group">
+    <label class="control-label" for="avatar">Avatar</label>
+    <div class="controls">
+      <img class="avatar" id="avatar_preview" ng-src="{{avatarUrl}}">
+      <yh-uploader  class="btn btn-danger ladda-button" button-text="Upload (57X57)" field-name="avatar"
+        action="{{avatarUploadUrl}}" security-header-name="sid" security-header-value="{{sid}}" 
+        on-complete="updateAvatar" 
+      />
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:isDirty(form.city)}">
+    <label class="control-label" for="city">City</label>
+    <div class="controls">
+      <input type="text" id="city" name="city" ng-model="formData.city" placeholder="city" required />
+      <span class="help-block" ng-show="isError(form.city, 'required')">Please input your City</span>
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:isDirty(form.website)}">
+    <label class="control-label" for="website">Website</label>
+    <div class="controls">
+      <input type="url" id="website" name="website" ng-model="formData.website" placeholder="Website" />
+      <span class="help-block" ng-show="isError(form.website, 'url')">Please input a valid url(start with http://)</span>
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:isDirty(form.slogan)}">
+    <label class="control-label" for="slogan">Slogan</label>
+    <div class="controls">
+      <input type="text" id="slogan" name="slogan" ng-model="formData.slogan" placeholder="Slogan" />
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:isDirty(form.bio)}">
+    <label class="control-label" for="bio">Bio</label>
+    <div class="controls">
+      <textarea rows="3" id="bio" name="bio" ng-model="formData.bio"  placeholder="Bio"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Save</button>
+    </div>
+  </div>
+</form>

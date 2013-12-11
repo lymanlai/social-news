@@ -1,0 +1,12 @@
+{
+	"type": "Email",
+	"host": "smtp.gmail.com",
+	"port": "465",
+	"ssl": true,
+	"username": "no-reply@yaha.me",
+	"password": "laijinyue",
+	"defaultFromAddress": "no-reply@yaha.me",
+	"defaultTemplate": "",
+	"internalOnly": true,
+	"productionOnly": false
+}

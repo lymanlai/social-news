@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+  .list{
+    li{
+       .content{
+        max-width: 251px;
+        max-height: 60px;
+        overflow: hidden;
+      } 
+    } 
+  }
+}

@@ -1,0 +1,45 @@
+{
+	"type": "Collection",
+	"properties": {
+		"location": {
+			"name": "location",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "location",
+			"order": 0
+		},
+		"date": {
+			"name": "date",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "date",
+			"order": 1
+		},
+		"members": {
+			"name": "members",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "members",
+			"order": 2
+		},
+		"maleCount": {
+			"name": "maleCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "maleCount",
+			"order": 3
+		},
+		"femaleCount": {
+			"name": "femaleCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "femaleCount",
+			"order": 4
+		}
+	}
+}

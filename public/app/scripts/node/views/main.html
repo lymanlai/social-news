@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+  <li ng-class="{ active: $state.includes('node.newest') }"><a href="#/node">Newest</a></li>
+  <li ng-class="{ active: $state.includes('node.hotest') }"><a href="#/node/hotest">Hotest</a></li>
+  <li ng-class="{ active: $state.includes('node.upest') }"><a href="#/node/upest">Upest</a></li>
+  <li ng-class="{ active: $state.includes('node.downest') }"><a href="#/node/downest">Downest</a></li>
+
+  <li ng-class="{ active: $state.is('node.add') }" ng-show="hasPermission('user')" class="pull-right"><a href="#/node/add"> <i class="fui-new"></i> Add</a></li>
+  <li ng-class="{ active: $state.is('node.my') }" ng-show="hasPermission('user')" class="pull-right"><a href="#/node/my">My Node</a></li>
+</ul>
+<div ui-view ng-animate="{enter:'fade-enter'}"></div>

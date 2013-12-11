@@ -1,0 +1,22 @@
+<div class="form-wrap">
+  <div class="login-form">
+  <form name="form" novalidate ng-submit="submit()">
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>    
+    <div class="control-group ng-class:{error:form.username.$invalid}">
+      <input type="email" class="login-field" value="" placeholder="Email" id="login-username" ng-model="username" name="username" autofocus required email/>
+      <label class="login-field-icon fui-mail" for="login-username"></label>
+      <span class="help-block" ng-show="form.username.$dirty && form.username.$error.required">Please input your email</span>
+      <span class="help-block" ng-show="form.username.$dirty && form.username.$error.email">Please input a validate email address</span>
+    </div>
+
+    <div class="control-group ng-class:{error:form.password.$dirty && form.password.$invalid}">
+      <input type="password" class="login-field" value="" placeholder="Password" id="login-password" ng-model="password" name="password" required />
+      <label class="login-field-icon fui-lock" for="login-password"></label>
+      <span class="help-block" ng-show="form.password.$dirty && form.password.$error.required">Please input your Password</span>
+    </div>
+
+    <button class="btn btn-primary btn-large btn-block" type="submit" ng-disabled="form.$invalid">Login</button>
+    <a class="login-link" href="#/lostpassword">Lost password?</a>
+  </form>
+  </div>
+</div>

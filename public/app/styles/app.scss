@@ -1,0 +1,168 @@
+html,
+body {
+  height: 100%;
+  background: url(../images/bg.png);
+}
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+  padding:1.5em;
+  background: #fff;
+  > hr {
+    margin: 30px 0;
+  }
+}
+
+.title,
+.tag,
+.muted a,
+.nav a{
+  text-decoration: none;
+}
+.title:hover{
+  text-decoration: underline;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+  h1 {
+    font-size: 72px;
+    line-height: 1;
+  }
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+.color-firm{
+  color:#1abc9c;
+}
+.color-alizarin{
+  color:#e74c3c;
+}
+.form-wrap{
+  width:360px;
+  margin:0 auto;
+}
+.login-form:before{
+  left:0;
+}
+.footer{
+  margin-bottom: 9px;
+}
+.footer a{
+  color:#34495E;
+  text-decoration: none;
+}
+
+.fade-enter-setup, .fade-leave-setup {
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.fade-enter-setup,
+.fade-leave-setup.fade-leave-start {
+  opacity: 0;
+}
+.fade-leave-setup,
+.fade-enter-setup.fade-enter-start {
+  opacity: 1;
+}
+
+.list{
+  list-style:none;
+  margin: 10px;
+  li{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    .meta{
+      width: 50px;
+      height: 57px;
+      a{
+        text-decoration: none;
+        float:right;
+      }
+    }
+    &.comment .meta{
+      height: 47px;
+      margin-top:10px;
+    }
+    .content{
+      margin: 0 10px;
+      max-width: 530px;
+    }
+    &:hover{
+      background: #ECF0F1;
+    }
+  }
+}
+
+img.avatar{
+  width: 57px;
+  height: 57px;
+}
+.vote-up{
+  color: #E74C3C;
+}
+.vote-down{
+  color: #34495E;
+}
+.pagination{
+  text-align: center;
+  ul{
+    padding: 0 5px 0 10px;
+    li > a{
+      background:#16A085;
+      cursor: pointer;      
+    }
+    li.disabled > a:hover{
+      border-color:#d6dbdf;
+    }
+  }
+}
+
+.block{
+  li{
+    margin-bottom: 10px;
+    list-style: none;
+    img{
+      margin-right:10px;
+    }
+  }
+}
+
+.loading,
+.ng-cloak{
+  display:none;
+}
+.loading.ng-cloak{
+  display: block;
+  font-family:Arial!important;
+}
+
+.nav-tabs > .active > a:hover{
+  cursor: pointer;
+}
+
+.comment-form{
+  .control-label{
+    width: 80px;
+    padding-top: 0;
+  }
+  .controls{
+    margin-left: 90px;
+  }
+  #text{
+    width: 90%;
+  }
+}

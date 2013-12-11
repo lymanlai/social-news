@@ -1,0 +1,20 @@
+<ul class="list">
+
+  <li ng-repeat="item in items ">
+    <a class="pull-left" href="#">
+        <img class="avatar" alt="{{item.authorDisplayName}}" title="{{item.authorDisplayName}}" ng-src="{{avatarUrl(item.authorId)}}">
+    </a>
+    <div class="pull-left content">
+      <a class="title" ng-href="#/node/{{sortType}}/{{item.id}}">{{item.title}}</a>
+    </div>
+    <div class="pull-right meta">
+      {{item.voteUpCount | coolNumber}} <a class="icon-chevron-up vote-up" href="javascript:false" ng-click="doVote(item, 'up')"></a> <br />
+      {{item.voteDownCount | coolNumber}} <a class="icon-chevron-down vote-down" href="javascript:false" ng-click="doVote(item, 'down')"></a>  <br />
+      {{item.commentCount | coolNumber}} <a class="fui-chat" ng-href="#/node/{{sortType}}/{{item.id}}#text"></a> <br />
+    </div>
+    <div class="clearfix"></div>
+  </li>
+
+</ul>
+
+<pagination ng-show="numPages > 1" on-select-page="changePage(page)" previous-text="Prev" num-pages="numPages" current-page="currentPage" max-size="5" direction-links="true"></pagination>

@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nodeId": {
+			"name": "nodeId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "nodeId",
+			"order": 0
+		},
+		"type": {
+			"name": "type",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "type",
+			"order": 1
+		},
+		"authorId": {
+			"name": "authorId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "authorId",
+			"order": 2
+		}
+	}
+}

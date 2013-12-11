@@ -1,0 +1,41 @@
+<form class="form-horizontal" name="form" novalidate ng-submit="submit()">
+  <div class="control-group ng-class:{error:isDirty(form.username)}">
+    <label class="control-label" for="username">Email</label>
+    <div class="controls">
+      <input type="email" id="username" name="username" ng-model="formData.username" placeholder="Email" ng-disabled="true" />
+    </div>
+  </div>    
+  <div class="control-group">
+    <label class="control-label" for="displayName">Display Name</label>
+    <div class="controls">
+      <input type="text" id="displayName" name="displayName" ng-model="formData.displayName" placeholder="Display Name" ng-disabled="true" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="changePassword">Change Password</label>
+    <div class="controls">
+      <input type="checkbox" id="changePassword" name="changePassword" ng-model="formData.changePassword" />
+    </div>
+  </div>  
+<div ng-show="formData.changePassword">
+  <div class="control-group ng-class:{error:isDirty(form.newPassword)}">
+    <label class="control-label" for="newPassword">New Password</label>
+    <div class="controls">
+      <input type="password" id="newPassword" name="newPassword" ng-model="newPassword" placeholder="New Password" required />
+      <span class="help-block" ng-show="isError(form.newPassword, 'required')">Please input your new password</span>
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:isDirty(form.verifyPassword)}">
+    <label class="control-label" for="verifyPassword">Verify Password</label>
+    <div class="controls">
+      <input type="password" id="verifyPassword" name="verifyPassword" ng-model="verifyPassword" placeholder="Verify Password" required yh-match="newPassword" />
+      <span class="help-block" ng-show="isError(form.verifyPassword, 'match')">Passwords don't match.</span>
+    </div>
+  </div>
+</div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Save</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,52 @@
+
+<ul class="list">
+  <li ng-repeat="item in items">
+    <img class="avatar pull-left" alt="{{item.authorDisplayName}}" title="{{item.authorDisplayName}}" ng-src="{{avatarUrl(item.authorId)}}" />
+    <div class="pull-left content">
+      {{item.title}} <br />
+      {{item.text}} <br />
+      <a ng-href="{{item.url}}" ng-show="item.url" title="{{item.url}}" target="_blank">{{item.url}}</a>
+    </div>
+    <div class="pull-right meta">
+      {{item.voteUpCount | coolNumber}} <a class="icon-chevron-up vote-up" href="javascript:false" ng-click="doVote(item, 'up')"></a> <br />
+      {{item.voteDownCount | coolNumber}} <a class="icon-chevron-down vote-down" href="javascript:false" ng-click="doVote(item, 'down')"></a>  <br />
+      {{item.commentCount | coolNumber}} <a class="fui-chat" href="javascript:false" ng-click="goToComment()"></a> <br />
+    </div>
+    <div class="clearfix"></div>
+  </li>
+
+  <li ng-repeat="item in commentItems" class="comment">
+    <img class="avatar pull-left" alt="{{item.authorDisplayName}}" title="{{item.authorDisplayName}}" ng-src="{{avatarUrl(item.authorId)}}">
+    <div class="pull-left content">
+      {{item.title}}
+    </div>
+    <div class="pull-right meta">
+      {{item.voteUpCount | coolNumber }} <a class="icon-chevron-up vote-up" href="javascript:false" ng-click="doVote(item, 'up')"></a> <br />
+      {{item.voteDownCount | coolNumber }} <a class="icon-chevron-down vote-down" href="javascript:false" ng-click="doVote(item, 'down')"></a>  <br />
+    </div>
+    <div class="clearfix"></div>
+  </li>
+
+</ul>
+
+<div class="pagination" ng-show="hasNextPage || !(currentPage <= 1)">
+  <a class="btn btn-primary" ng-click="queryPrevPage()" ng-disabled="currentPage <= 1"><span class="fui-arrow-left"></span>Prev</a>
+  <a class="btn btn-primary" ng-click="queryNextPage()" ng-disabled="!hasNextPage">Next<span class="fui-arrow-right"></span></a>
+</div>
+
+<form class="form-horizontal comment-form" name="form" novalidate ng-submit="submit()">
+  <div class="control-group ng-class:{error:form.text.$invalid}">
+    <label class="control-label" for="text">
+      <img class="avatar" alt="{{me.displayName}}" title="{{me.displayName}}" ng-src="{{avatarUrl(me.id)}}" />
+    </label>
+    <div class="controls">
+      <textarea id="text" name="text" ng-model="formData.title" placeholder="comment text here" yh-focus="makeCommentFocus" required ui-keydown="{'ctrl-enter':'submit()'}"></textarea>
+      <span class="help-block" ng-show="form.text.$dirty && form.text.$error.required">Please input your comment</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button class="btn btn-primary" type="submit" ng-disabled="form.$invalid">Reply</button> (Ctrl+Enter)
+    </div>
+  </div>
+</form>

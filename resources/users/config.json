@@ -1,0 +1,61 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"role": {
+			"name": "role",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "role",
+			"order": 0
+		},
+		"avatar": {
+			"name": "avatar",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "avatar",
+			"order": 1
+		},
+		"city": {
+			"name": "city",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "city",
+			"order": 2
+		},
+		"displayName": {
+			"name": "displayName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "displayName",
+			"order": 3
+		},
+		"website": {
+			"name": "website",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "website",
+			"order": 4
+		},
+		"slogan": {
+			"name": "slogan",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "slogan",
+			"order": 5
+		},
+		"bio": {
+			"name": "bio",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "bio",
+			"order": 6
+		}
+	}
+}

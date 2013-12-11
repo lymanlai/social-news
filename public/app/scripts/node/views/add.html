@@ -1,0 +1,28 @@
+<form class="form-horizontal" name="form" novalidate ng-submit="submit()" ui-keydown="{'ctrl-enter':'submit()'}">
+  <div class="control-group ng-class:{error:form.title.$invalid}">
+    <label class="control-label" for="title">Title</label>
+    <div class="controls">
+      <input type="text" id="title" name="title" ng-model="formData.title" placeholder="Title"  autofocus required />
+      <span class="help-block" ng-show="form.title.$dirty && form.title.$error.required">Please input the title</span>
+    </div>
+  </div>
+  <div class="control-group ng-class:{error:form.url.$invalid}">
+    <label class="control-label" for="url">URL</label>
+    <div class="controls">
+      <input type="url" id="url" name="url" ng-model="formData.url"  placeholder="URL" url />
+      <span class="help-block" ng-show="form.url.$dirty && form.url.$error.url">Please input a validate url address</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="text">Text</label>
+    <div class="controls">
+      <textarea id="text" name="text" ng-model="formData.text" placeholder="text"></textarea>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <button class="btn btn-primary" type="submit" ng-disabled="form.$invalid">Save</button> (Ctrl+Enter)
+    </div>
+  </div>
+</form>

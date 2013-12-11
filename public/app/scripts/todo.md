@@ -1,0 +1,1 @@
+1. before transition to login, should save state first, then after login can redirect to the state

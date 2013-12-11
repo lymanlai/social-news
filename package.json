@@ -1,0 +1,7 @@
+{
+  "name": "social news",
+  "version": "0.1.0",
+  "dependencies": {
+    "deployd": "git@github.com:deployd/deployd.git"
+  }
+}
